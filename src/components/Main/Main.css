@@ -1,0 +1,43 @@
+.main_routing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.main_link{
+    padding: 10px 10px;
+    margin: 10px 10px;
+    position: relative;
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+}
+
+.report_img{
+    width: 100px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+.bike{
+    width: 80%;
+}
+
+.main_bike_imgs{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-top: 40px;
+    justify-items: center;
+}
+
+.company_title{
+    padding: 10px;
+}
+
+.main_span{
+    color:black;
+    font-weight: bold;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}

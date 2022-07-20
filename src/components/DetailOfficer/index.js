@@ -1,0 +1,1 @@
+export {DetailOfficer} from './DetailOfficer'

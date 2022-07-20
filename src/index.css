@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Roboto Slab', serif; 
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin-top: 15px;
+}
+
+@media (max-width:580px){
+  a{
+    font-size: 20px;
+  }
+
+  .report_img{
+    width: 25%;
+  }
+
+  .main_link{
+    font-size: 16px;
+  }
+
+  .report input{
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 520px){
+  .signUp_button{
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 370px){
+  a{
+    font-size: 15px;
+  }
+
+  .detail_title{
+    font-size: 16px;
+  }
+
+  .header{
+    margin: 0;
+  }
+
+  .header_menu{
+    margin: 0 0 0 -55px;
+  }
+}
+
+@media (max-width: 370px){
+  .header_menu{
+    margin-left: -60px;
+  }
+  .main_link, .company_title{
+    font-size: 13px;
+  }
+}

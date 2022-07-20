@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_menu{
+    list-style: none;
+    display: flex;
+    margin-left: -40px;
+}
+
+.header_menu li{
+    margin: 20px 20px;
+    font-size: 30px;
+}
+
+.link{
+    text-decoration: none;
+}

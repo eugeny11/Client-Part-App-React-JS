@@ -1,4 +1,4 @@
-import React, {useState, useContext, useEffect} from 'react'
+import React, {useState, useContext} from 'react'
 import axios from 'axios'
 import './Report.css'
 import store from '../../data/store'
@@ -52,6 +52,19 @@ export const Report = () => {
 
     const onReport = (e) => {
         e.preventDefault()
+
+        if (!ownerFullName){
+            alert('Enter your full name!')
+        }
+
+        if (!type){
+            alert('Choose the type of bike!')
+        }
+
+        if (!licenseNumber){
+            alert('Enter the license number!')
+        }
+
         const data = {licenseNumber, date, color, type,
             ownerFullName, officer, description, clientId:'b0934244-c0ea-46d3-9f3b-5f155788ea1b' }
     
@@ -71,6 +84,18 @@ export const Report = () => {
 
     const onSubmit = (e) => {
         e.preventDefault()
+
+        if (!ownerFullName){
+            alert('Enter full name of owner!')
+        }
+
+        if (!type){
+            alert('Choose the type of bike!')
+        }
+
+        if (!licenseNumber){
+            alert('Enter the license number!')
+        }
 
         const data = {licenseNumber, date, color, type,
         ownerFullName, officer, description }

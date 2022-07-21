@@ -87,12 +87,12 @@ export const Detail = (props) => {
             <form className="detail_form" onSubmit={onSubmit}>
                 <input type="text" onChange={changeFullName} value={ownerFullName} placeholder='Owner fullname'/>
                 <input type="text" onChange={changeColor} value={color} placeholder='Bike color'/>
-                <label>Stoling date: {moment(date).format("ddd, hA")}</label>
+                <label>Stoling date: {moment(date).format("MMMM Do YYYY, h:mm:ss a")}</label>
                 <input type ="date"></input>
                 <input type="text" onChange={changeLicenseNumber} value={licenseNumber} placeholder='License number'/>
                 <input type="text" onChange={changeType} value={type} placeholder='Bike type'/>
-                <p className = "immute">Created at:{moment(createdAt).format("ddd, hA")}</p>
-                <p className = "immute">Update at:{moment(updatedAt).format("ddd, hA")}</p>
+                <p className = "immute">Created at:{moment(createdAt).format("MMMM Do YYYY, h:mm:ss a")}</p>
+                <p className = "immute">Update at:{moment(updatedAt).format("MMMM Do YYYY, h:mm:ss a")}</p>
                 <p>Status of case is: <b>{status}</b></p>
                 <select onChange={changeOfficer} defaultValue={'default'}>
                     <option value="default">Choose officer for your case:</option>

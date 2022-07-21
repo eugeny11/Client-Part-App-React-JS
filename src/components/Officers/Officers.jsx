@@ -31,6 +31,23 @@ export const Officers = () => {
 
     const onSubmit = (e) => {
         e.preventDefault()
+
+        if(!firstName){
+            alert('Enter the first name of officer!')
+        }
+
+        if(!lastName){
+            alert('Enter the last name of officer!')
+        }
+
+        if(!password){
+            alert('Enter the password!')
+        }
+
+        if(!email){
+            alert('Enter the email!')
+        }
+
         const data = {
             firstName, lastName, email, password, approved: false
         }
@@ -61,8 +78,8 @@ export const Officers = () => {
             <label>Pass</label>
             <input type="text" className='input_for_report' onChange={changePass} value={password}/>
 
-            <button type='submit' className='report_button'>Send report</button>
-            {submit && <p className='report_sent'>Report sent</p>}
+            <button type='submit' className='report_button'>Add officer</button>
+            {submit && alert('Officer was added')}
             <Link to='/list'>Officers list</Link>
             </form>
         </div>

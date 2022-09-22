@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# Client Part Of App, React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## FORMULATION OF TASK
 
-## Available Scripts
+A well-known bicycle rental company in major Russian cities is experiencing problems with frequent theft of their property (bicycles). As a possible solution to the problem, the company wants to keep a record of these cases and track progress. Their own developers have already prepared the server side of the application, but you need to implement the client side.
 
-In the project directory, you can run:
+The client part is designed for both company employees and ordinary users. A typical user has access to only a limited part of the functionality: the main page and a page with the ability to report a new case of theft.
 
-### `npm start`
+## FUNCTIONAL REQUIREMENTS
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### MAIN PAGE
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The main page should contain a text description of the service, perhaps pictures of your choice. This page is available to all users without authorization.
 
-### `npm test`
+### AUTHORIZATION FORM
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+You can place the authorization form on the main page, in the header of the site or on a separate page - at your discretion. Authorized users must be able to sign out of their account.
 
-### `npm run build`
+### REPORT THEFT
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+"Report stolen" should contain a form for submitting information about a stolen bike. The form must contain the following fields:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+License number (mandatory field)
+Client's full name (mandatory field)
+Bike type (dropdown list with predefined options, required field)
+Bicycle color
+date of theft
+Additional Information
+The page must be accessible to all users without authorization. However, if an authorized employee fills out the form (for example, if the client reported the theft by phone), one more additional field is available to him: responsible employee. The field is a drop-down list with the ability to select from a list of all approved employees that are in the database.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### REGISTRATION PAGE
 
-### `npm run eject`
+The registration page should contain a registration form with the following fields:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Email (mandatory field)
+Password (required field)
+Name
+Surname
+Client ID (required field)
+When the registration form is submitted, a new employee is created in the database. The first created employee with a specific client ID will automatically receive the approved status, the rest of the employees will need to be approved manually.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### THEFT REPORTS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+This page should contain a list of all known cases of theft (hint: it could be a table). It is not necessary to display service fields, for example, clientId. It should be possible to delete a post. Clicking on one message from the list should open its detailed page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### STEALTH REPORT DETAILS PAGE
 
-## Learn More
+The detail page of the message should contain all the information about the specific case of theft, with the ability to edit any field except createdAt, updatedAt and clientId. For fields that can take values ​​from the list, you need to make fields of the appropriate types.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Remember that only approved employees should appear in the list of responsible employees.
+The final comment field (resolution) should only be available when the status is "completed", and in this case it is mandatory. Those. you cannot change the status to "completed" without filling in the resolution field.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The detail page URL must contain the post id. Example: localhost:3000/cases/12345 will open the post page with id 12345.
 
-### Code Splitting
+###  EMPLOYEES
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This page should contain a list of all available employees. Service fields (id, clientId, password) do not need to be displayed. It should be possible to remove an employee. When clicking on one record from the list, the detailed page of this employee should open.
 
-### Analyzing the Bundle Size
+### EMPLOYEE DETAILS PAGE
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This page should contain detailed information on the employee with the possibility of editing. You cannot edit the email and clientId fields. It should be possible to approve/unapprove an employee (hint: you can use the checkbox field type for this).
 
-### Making a Progressive Web App
+The detail page URL must contain the employee id. Example: localhost:3000/officers/12345 will open the employee page with id 12345.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### INTERFACE REQUIREMENTS
 
-### Advanced Configuration
+In this project, there is no ready-made layout and you need to think over the user interface yourself. All design: colors, arrangement of elements, fonts - at your discretion. The interface will be evaluated according to the following criteria:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Readability: All text should be clearly visible and readable. The font size is at least 13 pixels.
+Accessibility: All elements must be accessible for interaction. It is not allowed to overlap with other elements, "creep away" from the edge of the screen, etc.
+Clarity: the user must clearly understand what a particular interface element is responsible for: a button, a field, a drop-down list, etc.
+Responsiveness: the interface should display correctly on any screen size.

@@ -12,6 +12,8 @@ The client part is designed for both company employees and ordinary users. A typ
 
 The main page should contain a text description of the service, perhaps pictures of your choice. This page is available to all users without authorization.
 
+![Main page](https://github.com/eugeny11/Client-Part-App-React-JS/blob/main/images/client_part_app_1.jpg)
+
 ### AUTHORIZATION FORM
 
 You can place the authorization form on the main page, in the header of the site or on a separate page - at your discretion. Authorized users must be able to sign out of their account.
@@ -43,6 +45,8 @@ When the registration form is submitted, a new employee is created in the databa
 
 This page should contain a list of all known cases of theft (hint: it could be a table). It is not necessary to display service fields, for example, clientId. It should be possible to delete a post. Clicking on one message from the list should open its detailed page.
 
+![Detailed list](https://github.com/eugeny11/Client-Part-App-React-JS/blob/main/images/client_part_app_4.jpg)
+
 ### STEALTH REPORT DETAILS PAGE
 
 The detail page of the message should contain all the information about the specific case of theft, with the ability to edit any field except createdAt, updatedAt and clientId. For fields that can take values ​​from the list, you need to make fields of the appropriate types.
@@ -56,11 +60,15 @@ The detail page URL must contain the post id. Example: localhost:3000/cases/1234
 
 This page should contain a list of all available employees. Service fields (id, clientId, password) do not need to be displayed. It should be possible to remove an employee. When clicking on one record from the list, the detailed page of this employee should open.
 
+![Officers](https://github.com/eugeny11/Client-Part-App-React-JS/blob/main/images/client_part_app_2.jpg)
+
 ### EMPLOYEE DETAILS PAGE
 
 This page should contain detailed information on the employee with the possibility of editing. You cannot edit the email and clientId fields. It should be possible to approve/unapprove an employee (hint: you can use the checkbox field type for this).
 
 The detail page URL must contain the employee id. Example: localhost:3000/officers/12345 will open the employee page with id 12345.
+
+![Detailed officers list](https://github.com/eugeny11/Client-Part-App-React-JS/blob/main/images/client_part_app_3.jpg)
 
 ### INTERFACE REQUIREMENTS
 

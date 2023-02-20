@@ -1,5 +1,11 @@
 # Client Part Of App, React JS
 
+## HOW TO CLONE AND RUN REACT APP
+
+Open your terminal and then type. $ git clone {the url to the GitHub repo} This clones the repo.
+cd into the new folder and type. $ npm install. This installs the required dependencies.
+To run the React project. $ npm start.
+
 ## FORMULATION OF TASK
 
 A well-known bicycle rental company in major Russian cities is experiencing problems with frequent theft of their property (bicycles). As a possible solution to the problem, the company wants to keep a record of these cases and track progress. Their own developers have already prepared the server side of the application, but you need to implement the client side.

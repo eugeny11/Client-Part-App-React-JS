@@ -141,7 +141,7 @@ This page should contain detailed information on the employee with the possibili
 
 The detail page URL must contain the employee id. Example: localhost:3000/officers/12345 will open the employee page with id 12345.
 
-### СТРАНИЦА ДЕТАЛЕЙ СОТРУДНИКА
+### ДЕТАЛЬНАЯ СТРАНИЦА СОТРУДНИКА
 
 На этой странице должна содержаться подробная информация о сотруднике с возможностью редактирования. Нельзя редактировать поля электронной почты и clientId. Должна быть возможность утвердить/не утверждать сотрудника (подсказка: для этого можно использовать тип поля "флажок").
 

@@ -11,7 +11,7 @@ To run the React project. $ npm start.
 ## КАК СКЛОНИРОВАТЬ И ЗАПУСТИТЬ ПРИЛОЖЕНИЕ НА REACT
 
 Откройте ваш терминал и введите:
-```bash
+
 $ git clone {URL репозитория на GitHub}
 
 Это клонирует репозиторий.
@@ -25,7 +25,6 @@ $ npm install
 
 $ npm start
 
-## FORMULATION OF TASK
 
 A well-known bicycle rental company in major Russian cities is experiencing problems with frequent theft of their property (bicycles). As a possible solution to the problem, the company wants to keep a record of these cases and track progress. Their own developers have already prepared the server side of the application, but you need to implement the client side.
 
